@@ -4,7 +4,10 @@ jobs:
   deploy-storybook:
      docker:
       - image: circleci/node:8
+     steps:
       - checkout
+      - run: echo "Hello world"
+
 
 workflows:
   version: 2
