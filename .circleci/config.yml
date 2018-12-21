@@ -1,0 +1,13 @@
+version: 2.1
+
+jobs:
+  deploy-storybook:
+     docker:
+      - image: circleci/node:8
+      - checkout
+
+workflows:
+  version: 2
+  main:
+    jobs:
+      - deploy-storybook
