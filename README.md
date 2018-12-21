@@ -1,3 +1,3 @@
 # storybook-link-bot-demo
 
-Hello!
+Hello! :ok_hand: 
