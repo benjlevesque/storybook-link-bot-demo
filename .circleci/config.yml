@@ -7,11 +7,15 @@ jobs:
      steps:
       - checkout
       - run: echo "Hello world"
+  build-storybook:
+     docker:
+      - image: circleci/node:8
+     steps:
+      - run: echo "Hello world"
   deploy-storybook:
      docker:
       - image: circleci/node:8
      steps:
-      - checkout
       - run: echo "Hello world"
 
 
@@ -19,6 +23,11 @@ workflows:
   version: 2
   deploy-storybook:
     jobs:
+      - build-storybook
+      - approval:
+          type: approval
+          requires: 
+            - build-storybook
       - deploy-storybook
   main:
     jobs:
