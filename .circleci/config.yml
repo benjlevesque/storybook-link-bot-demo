@@ -28,7 +28,7 @@ workflows:
           type: approval
           requires: 
             - build-storybook
-      - deploy-storybook
+      - deploy-storybook:
           requires: 
             - approval
   main:
