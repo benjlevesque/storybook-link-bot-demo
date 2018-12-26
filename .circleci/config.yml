@@ -29,6 +29,8 @@ workflows:
           requires: 
             - build-storybook
       - deploy-storybook
+          requires: 
+            - approval
   main:
     jobs:
       - build
